@@ -1,4 +1,7 @@
 {
+	"scripts": {
+		"dev_web3": "pn run -C packages/web3 dev"
+	},
 	"dependencies": {
 		"web3": "^4.3.0"
 	}
