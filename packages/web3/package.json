@@ -1,6 +1,6 @@
 {
+  "name": "@web/web3",
   "scripts": {
     "dev": "vite"
-  },
-  "name": "@web/web3"
+  }
 }

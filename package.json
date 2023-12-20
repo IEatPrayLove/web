@@ -1,8 +1,11 @@
 {
 	"scripts": {
-		"dev_web3": "pn run -C packages/web3 dev"
+		"dev_web3": "pnpm run -C packages/web3 dev",
+		"server": "pnpm run -C packages/serve dev"
 	},
 	"dependencies": {
+		"dotenv": "^16.3.1",
+		"nodemon": "^3.0.2",
 		"web3": "^4.3.0"
 	},
 	"devDependencies": {
