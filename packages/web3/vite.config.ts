@@ -1,6 +1,7 @@
 import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
 import dotenv from "dotenv"
+import path from "path";
 dotenv.config()
 export default defineConfig({
     plugins: [react()],
@@ -8,6 +9,11 @@ export default defineConfig({
     build: {
         sourcemap: true,
         target: ["es2015"],
+    },
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "src"),
+        },
     },
     server: {
         hmr: true,

@@ -4,18 +4,19 @@
 		"server": "pnpm run -C packages/serve dev"
 	},
 	"dependencies": {
-		"@types/node": "^20.10.5",
-		"axios": "^1.6.2",
+		"@types/node": "^20.10.6",
+		"axios": "^1.6.3",
 		"dotenv": "^16.3.1",
 		"nodemon": "^3.0.2",
-		"web3": "^4.3.0"
+		"web3": "4.3.1-dev.5afcb54.0"
 	},
 	"devDependencies": {
-		"@types/react": "^18.2.45",
+		"@types/react": "^18.2.46",
 		"@types/react-dom": "^18.2.18",
 		"@vitejs/plugin-react": "^4.2.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.21.1",
 		"typescript": "^5.3.3",
 		"vite": "^5.0.10"
 	}
