@@ -16,21 +16,15 @@ interface userInfo {
 const Mine = () => {
     const [info, setInfo] = useState<userInfo[]>([])
     const init = async () => {
-        const res = await getUserInfo()
-        setInfo(res.data.dataList)
+        const res:any = await getUserInfo()
+        setInfo(res.data['dataList'])
     }
     useEffect(() => {
         void init()
     }, [])
     return (
         <ErrorBoundary fallback={<div>捕获到错误</div>}>
-            <div onClick={
-                () => {
-                    if (true) {
-                        throw new Error('出错了')
-                    }
-                }}>mine
-            </div>
+            <div>mine</div>
             <div>
                 {
                     info.map((item, index) => {

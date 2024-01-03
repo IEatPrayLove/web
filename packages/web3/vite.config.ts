@@ -23,8 +23,7 @@ export default defineConfig({
         host: "0.0.0.0",
         proxy: {
             "web3": {
-                // target: process.env.DEV_SERVER,
-                target: "http://172.19.240.1:3000",
+                target: process.env.DEV_SERVER,
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/web3/, ""),
             }
