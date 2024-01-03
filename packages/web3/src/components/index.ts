@@ -1,3 +1,5 @@
 import ErrorBoundary from './errorBoundary'
 
-export {ErrorBoundary}
+export {
+    ErrorBoundary
+}
