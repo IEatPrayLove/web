@@ -1,5 +1,4 @@
 import ErrorBoundary from './errorBoundary'
 
-export {
-    ErrorBoundary
-}
+const list = import.meta.globEager("./*.tsx");
+export default list

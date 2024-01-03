@@ -4,7 +4,6 @@ import dotenv from "dotenv"
 import path from "path";
 
 dotenv.config()
-console.info(process.env.DEV_SERVER, 789)
 export default defineConfig({
     plugins: [react()],
     base: "./",
@@ -22,7 +21,7 @@ export default defineConfig({
         open: true,
         host: "0.0.0.0",
         proxy: {
-            "web3": {
+            "/web3": {
                 target: process.env.DEV_SERVER,
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/web3/, ""),
