@@ -1,5 +1,5 @@
 import {createHashRouter} from 'react-router-dom'
-import {Home, Login} from './elements'
+import {Home, Login, Mine} from './elements'
 
 const router = createHashRouter([
     {
@@ -7,10 +7,14 @@ const router = createHashRouter([
         element: <Home/>,
         children: [
             {
-                path: '/login',
-                element: <Login />
+                path: 'login',
+                element: <Login/>
             }
         ]
+    },
+    {
+        path: '/mine',
+        element: <Mine/>
     }
 ])
 export default router;

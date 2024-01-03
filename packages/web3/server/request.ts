@@ -17,13 +17,12 @@ const defaultOptions = {
 }
 
 function $api(options: apiOptions) {
-    const url = location.protocol + "//" + location.host + "/web3" + options.url
+    // const url = location.protocol + "//" + location.host + "/web3" + options.url
     const configOptions: apiOptions = {
         ...defaultOptions,
         ...options,
-        url
+        url:'http://172.19.240.1:3000' + options.url
     }
-    console.log(url)
     return new Promise((resolve, reject) => {
         axios({
             ...configOptions
