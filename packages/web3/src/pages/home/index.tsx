@@ -1,14 +1,45 @@
-import {Fragment} from "react";
+import {Fragment, lazy, useEffect} from "react";
 import {Outlet, useNavigate} from "react-router-dom";
+const Index = lazy(()=>import("../login"))
 
 const Home = () => {
     const navigate = useNavigate();
     const handleClick = () => {
         navigate("/mine")
     }
+    useEffect(() => {
+        var a;
+        var b = new Promise((resolve)=>{
+            console.log("promise1");
+            setTimeout(()=>{
+                resolve()
+            },1000)
+        }).then(()=>{
+            console.log("p2")
+        }).then(()=>{
+            console.log('p3')
+        }).then(()=>{
+            console.log('p4')
+        })
+        a = new Promise(async (resolve)=>{
+            console.log(a)
+            await b;
+            console.log(a)
+            console.log("after1")
+            await a;
+            resolve(true)
+            console.log("after2")
+        })
+        console.log("end")
+        const demo = document.getElementsByClassName("demo")
+
+    }, []);
     return (
         <Fragment>
             <div>home</div>
+            <template>
+                <div className="demo">11111</div>
+            </template>
             <hr/>
             <button onClick={handleClick} tabIndex={0}>点击</button>
             <form name="my">
